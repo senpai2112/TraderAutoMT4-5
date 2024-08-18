@@ -40,7 +40,7 @@ CALCULATE, TRADE, DECISION = range(3)
 SYMBOLS = ['AUDCAD', 'AUDCHF', 'AUDJPY', 'AUDNZD', 'AUDUSD', 'CADCHF', 'CADJPY', 'CHFJPY', 'EURAUD', 'EURCAD', 'EURCHF', 'EURGBP', 'EURJPY', 'EURNZD', 'EURUSD', 'GBPAUD', 'GBPCAD', 'GBPCHF', 'GBPJPY', 'GBPNZD', 'GBPUSD', 'NOW', 'NZDCAD', 'NZDCHF', 'NZDJPY', 'NZDUSD', 'USDCAD', 'USDCHF', 'USDJPY', 'XAGUSD', 'XAUUSD']
 
 # RISK FACTOR
-RISK_FACTOR = float(os.environ.get("RISK_FACTOR"))
+RISK_FACTOR = float(os.environ.get("RISK_FACTOR").strip('"\''))  # strips both ' and "
 
 
 # Helper Functions
